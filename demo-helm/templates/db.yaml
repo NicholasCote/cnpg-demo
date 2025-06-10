@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.db.name }}
   namespace: {{ .Release.Namespace }}
 spec:
+  enableSuperuserAccess: true  
   instances: 3
   storage:
     size: 1Gi
