@@ -22,4 +22,4 @@ spec:
         name: {{ .Values.db.name }}-app-user
         
   superuserSecret:
-    name: {{ .Values.db.name }}-superuser
+    name: {{ .Values.db.name }}-dumb-su
