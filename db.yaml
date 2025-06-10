@@ -19,7 +19,7 @@ spec:
       database: {{ .Values.db.database }}
       owner: {{ .Values.db.owner }}
       secret:
-        name: {{ .Values.db.name }}-app-user
+        name: {{ .Values.db.name }}-user
         
   superuserSecret:
-    name: {{ .Values.db.name }}-dumb-su
+    name: {{ .Values.db.name }}-su
