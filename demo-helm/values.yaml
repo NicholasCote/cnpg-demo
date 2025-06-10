@@ -3,10 +3,10 @@ db:
   owner: ncote
   database: testdb
   superUser:
-    secretPath: flask-db-demo
+    secretPath: cnpg-demo
     usernameKey: suname
     passwordKey: supass
   appUser:
-    secretPath: flask-db-demo
+    secretPath: cnpg-demo
     usernameKey: username
     passwordKey: password
