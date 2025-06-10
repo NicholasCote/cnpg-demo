@@ -1,7 +1,7 @@
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: {{ .Values.webapp.name }}-superuser-esos
+  name: {{ .Values.db.name }}-superuser-esos
   namespace: {{ .Release.Namespace }}
 spec:
   refreshInterval: 1h
@@ -9,7 +9,7 @@ spec:
     name: user-ro
     kind: SecretStore
   target:
-    name: {{ .Values.webapp.name }}-superuser
+    name: {{ .Values.db.name }}-superuser
   data:
     - secretKey: username
       remoteRef:
