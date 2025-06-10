@@ -9,6 +9,10 @@ spec:
   storage:
     size: 1Gi
     storageClass: ceph-kubepv
+    
+  postgresql:
+    pg_hba:
+      - "host all all 0.0.0.0/0 md5"
 
   bootstrap:
     initdb:
