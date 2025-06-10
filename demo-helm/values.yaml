@@ -1,6 +1,7 @@
 db:
   name: cnpg-demo
   owner: ncote
+  database: testdb
   superUser:
     secretPath: flask-db-demo
     usernameKey: suname

@@ -1,0 +1,20 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: {{ .Values.db.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  instances: 3
+  storage:
+    size: 1Gi
+    storageClass: ceph-kubepv
+
+  bootstrap:
+    initdb:
+      database: {{ .Values.db.database }}
+      owner: {{ .Values.db.owner }}
+      secret:
+        name: {{ .Values.db.name }}-app-user
+        
+  superuserSecret:
+    name: {{ .Values.db.name }}-superuser
