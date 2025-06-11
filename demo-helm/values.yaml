@@ -3,10 +3,10 @@ db:
   owner: ncote
   database: testdb
   superUser:
-    secretPath: cnpg-demo
+    secretPath: ncote@ucar.edu/cnpg-demo
     usernameKey: suname
     passwordKey: supass
   appUser:
-    secretPath: cnpg-demo
+    secretPath: ncote@ucar.edu/cnpg-demo
     usernameKey: username
     passwordKey: password
