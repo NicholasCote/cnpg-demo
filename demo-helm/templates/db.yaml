@@ -12,7 +12,6 @@ spec:
 
   certificates:
     serverTLSSecret: {{ .Values.db.name }}-tls-secret
-    serverCASecret: {{ .Values.db.name }}-tls-secret
 
   postgresql:
     pg_hba:
