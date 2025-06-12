@@ -8,15 +8,6 @@ spec:
     - server auth
   dnsNames:
     - "{{ .Values.db.name }}.k8s.ucar.edu"
-    - {{ .Values.db.name }}-rw
-    - {{ .Values.db.name }}-rw.{{ .Release.Namespace }}
-    - {{ .Values.db.name }}-rw.{{ .Release.Namespace }}.svc
-    - {{ .Values.db.name }}-r
-    - {{ .Values.db.name }}-r.{{ .Release.Namespace }}
-    - {{ .Values.db.name }}-r.{{ .Release.Namespace }}.svc
-    - {{ .Values.db.name }}-ro
-    - {{ .Values.db.name }}-ro.{{ .Release.Namespace }}
-    - {{ .Values.db.name }}-ro.{{ .Release.Namespace }}.svc
   issuerRef:
     name: incommon
     kind: ClusterIssuer
