@@ -8,8 +8,6 @@ metadata:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: "{{ .Values.db.name }}.k8s.ucar.edu"
     external-dns.alpha.kubernetes.io/ttl: "300"
-    cert-manager.io/cluster-issuer: "incommon"
-    cert-manager.io/certificate-name: "{{ .Values.db.name }}-tls-cert"
 spec:
   type: LoadBalancer
   selector:
