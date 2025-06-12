@@ -12,7 +12,7 @@ spec:
 
   certificates:
     serverTLSSecret: {{ .Values.db.name }}-server-cert
-    serverCASecret: {{ .Values.db.name }}-ca-cert
+    serverCASecret: {{ .Values.db.name }}-server-cert
 
   postgresql:
     pg_hba:
