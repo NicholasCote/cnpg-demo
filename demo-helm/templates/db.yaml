@@ -11,7 +11,8 @@ spec:
     storageClass: ceph-kubepv
 
   certificates:
-    serverTLSSecret: {{ .Values.db.name }}-tls-secret
+    serverTLSSecret: {{ .Values.db.name }}-server-cert
+    serverCASecret: {{ .Values.db.name }}-ca-cert
 
   postgresql:
     pg_hba:
