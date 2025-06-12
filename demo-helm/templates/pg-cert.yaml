@@ -10,5 +10,5 @@ spec:
     - "{{ .Values.db.name }}.k8s.ucar.edu"
   issuerRef:
     name: incommon
-    kind: Issuer
+    kind: ClusterIssuer
     group: cert-manager.io
