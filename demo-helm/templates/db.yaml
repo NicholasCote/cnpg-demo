@@ -9,7 +9,14 @@ spec:
   storage:
     size: 1Gi
     storageClass: ceph-kubepv
-    
+
+  certificates:
+    server:
+      enabled: true
+      generate: false
+      secret:
+        name: {{ .Values.db.name }}-tls-secret
+
   postgresql:
     pg_hba:
       - "host all all 0.0.0.0/0 md5"
